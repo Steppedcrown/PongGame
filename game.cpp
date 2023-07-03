@@ -71,11 +71,11 @@ simulate_game (Input* input, float dt) {
 
 		if (ball_p_y + ball_half_size > arena_half_size_y) {
 			ball_p_y = arena_half_size_y - ball_half_size;
-			ball_dp_y *= -1;
+			ball_dp_y *= -0.75; //-1 was too fast
 		}
 		else if (ball_p_y - ball_half_size < -arena_half_size_y) {
 			ball_p_y = -arena_half_size_y + ball_half_size;
-			ball_dp_y *= -1;
+			ball_dp_y *= -0.75; //-1 was too fast
 		}
 
 		if (ball_p_x + ball_half_size > arena_half_size_x) {
